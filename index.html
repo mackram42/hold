@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>Hold: Privacy Policy</title>
+<style>
+  /* The same page ships inside the app and is hosted on the web, so it carries
+     its own copy of the app's look and fetches nothing. Fonts are the bundled
+     ones, SIL Open Font License 1.1, see fonts/OFL.txt. */
+  @font-face {
+    font-family: 'Cormorant Garamond';
+    font-style: normal;
+    font-weight: 300 700;
+    font-display: swap;
+    src: url('fonts/cormorant-garamond-latin.woff2') format('woff2');
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0804;
+    --amber: #e8921a;
+    --text: #d4b896;
+    --text-dim: #a88a64;
+    --text-faint: #3a2a1a;
+    --serif: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  html { background: var(--bg); }
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--serif);
+    font-size: 1.1rem;
+    line-height: 1.6;
+    padding: 32px 24px calc(48px + env(safe-area-inset-bottom, 0px));
+  }
+  main { max-width: 560px; margin: 0 auto; }
+
+  .back {
+    display: inline-block;
+    padding: 10px 0;
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    text-decoration: none;
+  }
+  .back[hidden] { display: none; }
+
+  h1 { font-size: 2rem; font-weight: 400; color: var(--amber); line-height: 1.2; margin-bottom: 6px; }
+  .updated { font-size: 0.9rem; font-style: italic; color: var(--text-dim); margin-bottom: 28px; }
+  h2 {
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-dim);
+    margin: 32px 0 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--text-faint);
+  }
+  p { margin-bottom: 12px; }
+  ul { padding-left: 1.2em; margin-bottom: 12px; }
+  li { margin-bottom: 6px; }
+</style>
+</head>
+<body>
+<main>
+  <a class="back" id="back" href="index.html" hidden>&larr; Back</a>
+
+  <h1>Privacy Policy</h1>
+  <p class="updated">Hold. Last updated: 29 October 2026</p>
+
+  <h2>The short version</h2>
+  <p>This app does not collect anything. Nothing you do in it is sent anywhere. There are no accounts, no sign-up, no tracking, and no analytics.</p>
+  <p>Everything the app remembers is stored on your own device and nowhere else.</p>
+
+  <h2>What is stored on your device</h2>
+  <p>The app saves a small amount of information locally so it does not have to ask you the same questions every time. Five things, and nothing beyond them:</p>
+  <ul>
+    <li>The type of craving you chose: smoking, alcohol, food or other</li>
+    <li>Your timer length</li>
+    <li>The time of every session you finish, which is your craving log</li>
+    <li>Which suggestions you marked &ldquo;Show more often&rdquo; or &ldquo;Don&rsquo;t show again&rdquo;</li>
+    <li>Which suggestions you were shown recently, so the same one does not open two sessions in a row</li>
+  </ul>
+  <p>Your craving log is always on and there is no setting that switches it off, because the app keeps it for you rather than reporting it to anyone. It is a list of times held on your device, and it goes no further.</p>
+  <p>This information never leaves your phone. We cannot see it, and neither can anyone else.</p>
+
+  <h2>Deleting it</h2>
+  <p>Clearing the app&rsquo;s data, or uninstalling the app, removes all of it permanently. There is no copy anywhere else, so there is nothing for us to delete on your behalf and no account to close.</p>
+  <p>Your suggestion preferences can also be undone one at a time in Settings, under &ldquo;Your tips&rdquo;, where everything you have marked is listed with the action that reverses it.</p>
+
+  <h2>What we do not do</h2>
+  <ul>
+    <li>We do not collect personal information</li>
+    <li>We do not use analytics or tracking tools</li>
+    <li>We do not show advertising</li>
+    <li>We do not share, sell or transfer data to anyone, because we do not have any</li>
+    <li>We do not use cookies or any similar technology</li>
+    <li>We have no server for the app to send anything to</li>
+  </ul>
+
+  <h2>Payments</h2>
+  <p>The app contains no payments of any kind. Nothing is sold, nothing is collected and there is no link out of the app to anywhere that takes money.</p>
+
+  <h2>Children</h2>
+  <p>The app is not directed at children. It collects nothing from anyone, of any age.</p>
+
+  <h2>Changes</h2>
+  <p>If this policy ever changes, the updated version will be published at this address and shown in the app, with a new date at the top. The date above tells you which version you are reading.</p>
+
+  <h2>Contact</h2>
+  <p>Questions about this policy can be sent to 0kaminari0@gmail.com.</p>
+</main>
+<script>
+  // Inside the app there is a way back to it; on the web there is nothing to go
+  // back to, so the link stays hidden. The Android back button lands here too.
+  if (window.HoldNative) {
+    document.getElementById('back').hidden = false;
+    window.holdBack = function () { location.href = 'index.html'; return 'handled'; };
+  }
+</script>
+</body>
+</html>
